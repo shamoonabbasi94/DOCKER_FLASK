@@ -1,0 +1,23 @@
+#TO BUILD THE IMAGE
+docker build -t flask_image:0.0.1 .
+docker build -t image_name:tag  path , here . implies that docker file is int the root path
+
+#TO RUN THE CONTAINER
+docker run -d -p 4500:3000 flask_image:0.0.1
+docker run -d -p public_port:private_port image_name:tag
+
+-d --> for detach mode, release the terminal 
+-p ---> for port 
+
+docker ps --> to list the running images
+docker ps -a -> to list all existing images
+
+docker logs container_id --> to view the logs
+
+docker logs -f  container_id--> f for follow here
+
+docker exec -ti conatiner_name bash
+
+docker stats  ---> to view the memory and cpu utilization
+
+curl localhost:public_port ----> to send a hit 
